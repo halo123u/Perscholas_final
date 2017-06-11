@@ -1,0 +1,23 @@
+{
+  "name": "perscholas_final",
+  "version": "1.0.0",
+  "description": "Final Project for perscholas",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halo123u/Perscholas_final.git"
+  },
+  "author": "Oswaldo Almazo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/halo123u/Perscholas_final/issues"
+  },
+  "homepage": "https://github.com/halo123u/Perscholas_final#readme"
+}
