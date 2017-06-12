@@ -15,14 +15,25 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
             <img id="test" src="">
+            <img id="test2" src="">
+            <form>
+                <label >Gamertag</label><br>
+                <input type="text">
+                <button id="gtSubmit">Submit</button>
+            </form>
             <script src="/socket.io/socket.io.js"></script>
             <script>
                 var socket = io.connect('http://localhost:3000');
-                socket.on('news', function(data){
-                    console.log(data);
-                    document.getElementById('test').src= data.hello.request.uri.href;
-                    socket.emit('my other event', {my :'data'});
-                })   
+                socket.on('connection', function(data){
+                    socket.emit('connected', {status :'client connected to the server'});
+                    
+                });
+                    socket.emit('gt', {gt : 'halo123u'})
+                socket.on('data', (data)=>{
+                        console.log(data);
+                        document.getElementById('test').src= data.Spartan;
+                    document.getElementById('test2').src=data.Emblem;
+                    });   
             </script>
     </body>
 </html>
