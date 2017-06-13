@@ -28,6 +28,7 @@ var userGt = (gt)=>{
     console.log(options.url);     
     request(options, (err, res, body) => {
         console.log(emblem);
+        
         emblem=res.request.uri.href;
     });
 }
