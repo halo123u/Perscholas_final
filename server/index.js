@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const request = require('request');
+const rp = require('request-promise');
 
 var app = require('express')();
 var server = require('http').Server(app);

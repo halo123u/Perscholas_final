@@ -16,19 +16,25 @@
         <![endif]-->
             <img id="test" src="">
             <img id="test2" src="">
-            <form>
+            
                 <label >Gamertag</label><br>
-                <input type="text">
-                <button id="gtSubmit">Submit</button>
-            </form>
+                <input id="gamer" type="text"> <br>
+                <input type="submit" value="submit" onclick="submit()">
+            
             <script src="/socket.io/socket.io.js"></script>
             <script>
+                
                 var socket = io.connect('http://localhost:3000');
                 socket.on('connection', function(data){
                     socket.emit('connected', {status :'client connected to the server'});
                     
                 });
-                    socket.emit('gt', {gt : 'halo123u'})
+                function submit(){
+                        var tag = document.getElementById('gamer').value;
+                        console.log(tag);
+                        console.log('hello');
+                        socket.emit('gt', {gt : tag})
+                     }   
                 socket.on('data', (data)=>{
                         console.log(data);
                         document.getElementById('test').src= data.Spartan;
