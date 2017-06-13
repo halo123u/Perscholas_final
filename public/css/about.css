@@ -1,0 +1,31 @@
+body{
+
+    background: url('https://blogs-images.forbes.com/davidthier/files/2015/10/halo5_keyart_1120_logo-1940x1091.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+}
+ul {
+    text-decoration: none;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    padding-top:10px;
+    position:relative;
+}
+
+li {
+    flex:1;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    
+}
