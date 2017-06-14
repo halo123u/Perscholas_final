@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/about.css">
+        <link rel="stylesheet" href="../css/main.css"
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -18,10 +19,9 @@
                 <nav>
             <ul>
                 <li>
-                    <a href="land.html">landing page</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
+                   <a href="/">
+                   <img src="https://news.microsoft.com/stories/halo5/_media/images/branding/halo-5-effect-marquee-lockup-mobile.png" id="logo">
+                   </a>
                 </li>
                 <li>
                     <a href="characters.html">Characters</a>
@@ -40,10 +40,81 @@
                 </li>
             </ul>
         </nav>
-        <h1>"The best Halo game so far"</h1><br>
-        <h3>Gaming Trend - 100</h3>
-        <h1>"Warzone mode absolutely steals the show."</h1><br>
-        <h3>IGN 9/10</h3>
+        <div class="hero">
+            <div id="quotes">
+                <h1 class="left_q"><a href="#">"The best Halo game so far"</a></h1><br>
+                <h3 class="left_q" style="margin-top:-5%; ">Gaming Trend - 100</h3>
+                <h1 class="right_q"><a href="">Warzone mode absolutely steals the show."</a></h1><br>
+                <h3 class="right_q" style="margin-top:-10px; margin-left:-30%;">IGN 9/10</h3>
+            </div>
+
+            <div class="slideshow">
+                <button class="next" onclick="plusDivs(-1)">Previous</button>
+                <img class="mySlide" src="http://mp1st.com/wp-content/uploads/2015/06/h5-guardians-blue-team-master-chief-hero-finisher-804147ac4d9a44938a28db6407e78163.jpg" alt="">
+                <img class="mySlide" src="https://i.ytimg.com/vi/HnOX28WaRrE/maxresdefault.jpg" alt="">
+                <img class="mySlide" src="https://i.ytimg.com/vi/nmWsmkWlD48/maxresdefault.jpg" alt="">
+                <img class="mySlide" src="http://i1-news.softpedia-static.com/images/news2/halo-5-gets-gameplay-videos-screenshots-missing-split-screen-explanation-492500-9.jpg" alt="">
+                <img class="mySlide" src="http://compass.xbox.com/assets/a6/57/a6570684-cea8-40f8-aae9-543514b7af35.jpg?n=warzone-blade.jpg" alt="">    
+                <button class="next" onclick="plusDivs(1)">Next</button>
+            </div>
+        </div>
+        <div id="story">
+            <div class="contentL">
+                <h1 class="title">The story so far ....</h1>
+                <p class="text">Halo 5: Guardians takes place in the year 2558, and is set eight months after the events of Halo 4. The game follows the human fireteams Blue Team and Fireteam Osiris.[7] Blue Team is led by Master Chief Petty Officer John-117 (Steve Downes) and is composed of the Spartan-II teammates he fought alongside in the timeframe before Halo: Combat Evolved:[8] Linda-058 (Brittany Uomoleale), an elite sniper; Kelly-087 (Michelle Lukes), a scout known for her incredible speed and John's closest friend; and Frederic-104 (Travis Willingham), who is technically Blue Team's highest-ranking officer, but defers to Master Chief.[9] The members of Blue Team are all Spartan-IIs, augmented super soldiers who were abducted and trained as children; they are among the last Spartan-IIs left alive.[10] Fireteam Osiris comprises Spartan-IVs, a newer generation of Spartans who joined the program as adult members of the military. 
+                    Fireteam Osiris is led by Jameson Locke (Ike Amadi),
+                    a former agent of the Office of Naval Intelligence (ONI) and skilled tracker. 
+                    The other members of Fireteam Osiris are: Holly Tanaka (Cynthia McWilliams),
+                    a survivor of a Covenant attack on her world; Olympia Vale (Laura Bailey),
+                    who can speak many of the Covenant's dialects; and Edward Buck (Nathan Fillion),
+                    a veteran former Orbital Drop Shock Trooper who was previously a main character in Halo 3: ODST.
+                </p>      
+            </div>
+            <div class="dual">
+                <img class="imgC" src="http://compass.xbox.com/assets/bc/6d/bc6d2b14-2e3f-4adb-86ce-000e5de1cdf4.jpg?n=campaign-blade.jpg">
+                <img class="imgC" src="http://compass.xbox.com/assets/97/e0/97e0a3a4-ce9a-4234-99c5-b0f9895c7493.jpg?n=co-op.jpg">   
+            </div>
+            
+        </div>
+
+        <div id="story">
+            <div class="dual">
+                <img class="imgC" src="http://i1-news.softpedia-static.com/images/news2/halo-5-guardians-gets-warzone-multiplayer-tips-from-343-industries-485444-7.jpg">
+                <img class="imgC" src="http://news.xbox.com/wp-content/uploads/Halo-5-Guardians-Warzone-Firefight-Tank-Ride-1-940x528.jpg">   
+            </div>
+            <div class="contentR">
+                <h1 class="title">Warzone</h1>
+                <p class="text">Warzone is a 24-player multiplayer mode in Halo 5: Guardians.
+                     It features two teams of 12 players each, AI-controlled opponents, and maps 
+                     up to four times larger than any previous Halo multiplayer map. 
+                    Commander Sarah Palmer acts as the announcer for Warzone.
+                    </br>
+                    </br>
+                    There are three gametypes in Warzone.
+                     The first is the core gametype, which features AI-controlled opponents and a 
+                     home base for each team, as well as three bases to fight over. The second gametype 
+                     does not have AI opponents and features one attacking team tasked with capturing two 
+                     bases, before proceeding to destroy the enemy team's core.[6] The final gametype, 
+                     Warzone Firefight, tasks a team of 8 players with completing an objective each round 
+                     for 5 rounds, against AI opponents. If they fail to complete an objective, the match 
+                     will end with a loss.If they succeed in completing all five, the game will end in victory.
+                    </p>      
+            </div>
+        </div>  
+        <div id="story">
+            
+            <div class="contentL">
+                <h1 class="title">Arena</h1>
+                <p class="text">Arena is classic Halo at its finest: 4v4, with well-designed
+                     maps that don’t heavily favor one strategy over another, and a broad variety of modes like Slayer, CTF, and the fan-favorite fast-kill mode, SWAT. Its slew of maps and cosmetic armor customization options is impressive,
+                     and the addition of visible timers above power weapon spots creates
+                      exciting clashes like clockwork.</p>      
+            </div>
+            <div class="dual ">
+                <img class="imgC" src="https://mygaming.co.za/news/wp-content/uploads/2015/09/Halo-5-Guardians-Arena-Preview-Screenshot-1.jpg">
+                <img class="imgC" src="http://teambeyond.net/wp-content/uploads/2015/08/Halo-5-Guardians-Plaza-Screenshot-4.jpg">   
+            </div>
+        </div>  
         <script src="../js/about.js">
         </script>
     </body>

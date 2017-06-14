@@ -1,0 +1,41 @@
+* {
+    margin: 0 ;
+}
+nav{
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    display: flex;
+}
+ul {
+    text-decoration: none;
+    width: 100%;
+    display: flex;  
+    background-color: rgba(0,0,0,0.5);
+    height: 30px;
+    position:relative;
+}
+
+li {
+    flex:1;
+    height: 100%;
+    display: inline-block;
+    display: flex;
+    text-align: center;
+    
+}
+
+#logo{
+    width: 100px;
+}
+
+li:hover{
+    background: green;
+}
+
+a{
+    margin-top: 5px;
+    text-decoration: none;
+    color: white; 
+    text-align: center;
+}
