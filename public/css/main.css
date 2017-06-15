@@ -1,5 +1,6 @@
 * {
     margin: 0 ;
+    font-family: 'Spectral', serif;
 }
 nav{
     position: fixed;
@@ -13,6 +14,9 @@ ul {
     background-color: rgba(0,0,0,0.5);
     height: 30px;
     position:relative;
+}
+.title{
+    color:rgb(30, 159, 201)
 }
 
 li {

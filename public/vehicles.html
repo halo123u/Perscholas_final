@@ -11,21 +11,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/characters.css">
         <link rel="stylesheet" href="../css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+              <div id="modal">
+                <span id="close">&times;</span>
+                <h1 id="title"></h1>
+                <img id="modalpic"  src="" alt="">
+                <p id="desc"></p>
+        </div>
                 <nav>
             <ul>
                 <li>
-                    <a href="/land.html"><img src="https://news.microsoft.com/stories/halo5/_media/images/branding/halo-5-effect-marquee-lockup-mobile.png" id="logo"></a>
+                    <a href="land.html">
+                        <img id="logo" src="https://news.microsoft.com/stories/halo5/_media/images/branding/halo-5-effect-marquee-lockup-mobile.png">
+                    </a>
                 </li>
                 <li>
                     <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="characters.html">Characters</a>
+                    <a href="weapons.html">Weapons</a>
                 </li>
                 <li>
                     <a href="vehicles.html" >Vehicles</a>
@@ -38,6 +47,73 @@
                 </li>
             </ul>
         </nav>
-        <h1>Weapons</h1>
+        <div class="hero">
+            <h1 style="width:100%;">UNSC Vehicles</h1>
+            <img id="mantis" class="char"src="http://pre02.deviantart.net/154c/th/pre/f/2017/002/6/c/halo_5__guardians___oni_mantis_wallpaper_by_shadowspringlock-dau045f.png" onclick="display('mantis');"alt="">
+            <img id="scorp" class="char"src="https://i.ytimg.com/vi/DHSCDbelCsk/maxresdefault.jpg" onclick="display('scorp')"alt="">
+            <img id="war" class="char" src="http://i.ytimg.com/vi/kp4A7EfLDfs/0.jpg" onclick="display('war')" alt="">
+            <img id="wasp" class="char" src="https://static1.gamespot.com/uploads/original/1539/15391776/3084683-7141475587-H5-Gu.jpg" onclick="display('wasp')" alt="">
+            <h1 style="width:100%;">Covenant</h1>
+            <img id="wraith" class="char" src="../assets/wraith.png" onclick="display('wraith')" alt="">
+            <img id="ban" class="char" src="https://www.halopedia.org/images/4/49/Banshee_H4guide.png" onclick="display('ban')" alt="">
+            <img id="ghost" class="char" src="../assets/ghost.png" onclick="display('ghost')" alt="">
+            <!--<img id="vale" class="char" src="http://www.hdwallpapers.in/walls/vale_halo_5_guardians-wide.jpg" onclick="display('vale')" alt="">-->
+        </div>
+        <script>
+            function display(picture){
+               var modal = document.getElementById('modal');
+               var pic = document.getElementById('modalpic');
+               var photo = document.getElementById(picture).src;
+               var close = document.getElementById('close');
+           
+               modal.style.display = 'flex'
+               modal.style['z-index'] = '1';
+               window.location.href='#modal'; 
+               modalpic.src= photo;
+               load(picture);
+
+               close.onclick = function() {
+                    modal.style.display = "none";
+                }
+                function load(title){
+                    
+                    switch(title){
+                   case 'mantis':
+                    document.getElementById('title').innerHTML= "Oni Mantis";
+                    document.getElementById('desc').innerHTML="Master Chief Petty Officer John-117, more commonly known as the Master Chief, is a SPARTAN-II commando of the UNSC Naval Special Warfare Command who became one of the most important UNSC heroes during the Human-Covenant war.";
+                   break;
+                   case 'scorp':
+                   document.getElementById('title').innerHTML = 'Oni Scorpion';
+                   document.getElementById('desc').innerHTML = 'Petty Officer Second Class Kelly-087, born Kelly Shaddock,[1] is one of the few remaining SPARTAN-II supersoldiers. She is well-known due to close friendships with Joshua-029, Samuel-034, Linda-058, Frederic-104, and John-117. She was temporarily missing, but was later reunited with the remaining SPARTAN-IIs (excluding John-117) on Onyx.';
+                   break;
+                   case 'war':
+                   document.getElementById('title').innerHTML = 'Oni Warthog';
+                   document.getElementById('desc').innerHTML = 'Lieutenant, Junior Grade Frederic-104, born Frederic Ellsworth,[1] is a Spartan-II Commando and is one of the few surviving SPARTAN-IIs. Historically, Frederic-104 has held the highest rank among any of the active SPARTAN-IIs except for Kurt-051.';
+                   break;
+                   case 'wasp':
+                   document.getElementById('title').innerHTML = 'Wasp';
+                   document.getElementById('desc').innerHTML = 'Petty Officer Second Class Linda-058, born Linda Pravdin,[1] is a SPARTAN-II super soldier. She is one of the few known surviving Spartans and also best known for her skill with her SRS 99-S5 Sniper Rifle Nornfang, and once eliminated two targets so quickly that even John-117 couldn\'t tell who she had targeted first in the field.';
+                   break;
+                   case 'wraith':
+                   document.getElementById('title').innerHTML = 'Wraith';
+                   document.getElementById('desc').innerHTML = 'Locke underwent SPARTAN-IV augmentations and used the Hunter GEN2 Armor variant. He led Fireteam Osiris to search for John-117. As a first step, Locke made contact with Thel \'Vadam in order to gain insight on John\'s history while carrying out a UNSC-Sanghelli joint operation.';
+                   break;
+                   case 'ban':
+                   document.getElementById('title').innerHTML = 'Banshee';
+                   document.getElementById('desc').innerHTML = 'Tanaka would later be recruited to Fireteam Osiris with her C.O Jameson Locke, and teammates Edward Buck and Olympia Vale to find and retrieve the AWOL John-117 and the rest of Blue Team. As part of this hunt, Osiris would travel to Sanghelios to fight Jul \'Mdama\'s Covenant and Prometheans in the Battle of Sunaion.';
+                   break;
+                   case 'ghost':
+                   document.getElementById('title').innerHTML = 'Ghost';
+                   document.getElementById('desc').innerHTML = 'Counting time spent in cryo-sleep, Buck is a 25-year veteran of the war. He served in numerous battles throughout the Human-Covenant war. Watching so many of his fellow Marines die has left Buck thick-skinned and short-fused, but this wasn\'t always so. He was regarded as an extremely skilled Marine and by the Battle of Earth, was the commander of Alpha-Nine until Captain Veronica Dare took responsibility before the drop on New Mombasa, Kenya in October 20, 2552.';
+                   break;
+                   case 'vale':
+                   document.getElementById('title').innerHTML = 'Spartan vale';
+                   document.getElementById('desc').innerHTML = 'Olympia Vale was eleven years old when her parents divorced. Her mother, an officer in Navy signals intelligence, was promoted to captain and subsequently reassigned to UNSC High Command on Earth. The trip took Olympia and her mother six months instead of the regular six days, because their ship\'s slipspace drive broke down. During those six months Olympia taught herself to understand the Sangheili language.';
+                   break;
+
+               }
+                }
+            }
+        </script>
     </body>
 </html>

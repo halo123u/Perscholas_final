@@ -85,3 +85,8 @@ body{
     text-align: right;
 }
 
+.text{
+    background: rgba(61, 69,60, .6);
+    font-size: 20px;
+    color: white;
+}
