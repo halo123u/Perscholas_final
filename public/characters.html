@@ -16,6 +16,10 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="modal">
+                <span id="closeB" style="position:absolute; z-index:2;">&times;</span>
+                <img id="modalpic" src="" alt="">
+            </div>
                 <nav>
             <ul>
                 <li>
@@ -40,6 +44,32 @@
                 </li>
             </ul>
         </nav>
-        <h1>CHARACTERS!!</h1>
+        <div class="hero">
+            <h1 style="width:100%;">Blue Team</h1>
+            <img id="master_chief" class="char"src="https://vignette2.wikia.nocookie.net/halo/images/a/a9/H5G_Render_John117-Profile.png/revision/latest?cb=20170605101747" onclick="display('master_chief');"alt="">
+            <img id="kelly" class="char"src="https://vignette2.wikia.nocookie.net/halo/images/2/2d/H5G_Linda058_Transparent.png/revision/latest?cb=<20161101122717></20161101122717>" onclick="display('kelly')"alt="">
+            <img id="fred" class="char" src="http://www.hdwallpapers.in/walls/fred_halo_5_guardians-wide.jpg" onclick="display('fred')" alt="">
+            <img id="linda" class="char" src="https://content.halocdn.com/media/Default/encyclopedia/characters/linda-058/<linda-058-thumbnail-708x398-f0e2d1ee7bd44d6890e160e98bd44ebc class="jpg"></linda-058-thumbnail-708x398-f0e2d1ee7bd44d6890e160e98bd44ebc>" onclick="display('linda')" alt="">
+            <h1 style="width:100%;">Fireteam Osiris</h1>
+            <img id="locke" class="char" src="http://via.placeholder.com/300x300" onclick="display('locke')" alt="">
+            <img id="buck" class="char" src="http://via.placeholder.com/300x300" onclick="display('buck')" alt="">
+            <img id="tanaka" class="char" src="http://via.placeholder.com/300x300" onclick="display('tanaka')" alt="">
+            <img id="vale" class="char" src="http://via.placeholder.com/300x300" onclick="display('vale')" alt="">
+        </div>
+        <script>
+            function display(picture){
+               var modal = document.getElementById('modal');
+               var pic = document.getElementById('modalpic');
+               var photo = document.getElementById(picture).src;
+               var closeB = document.getElementById('closeB'); 
+               
+               closeB.onclick = function() {
+                    modal.style.display = "none";
+                }
+               modal.style.display = 'flex'
+               modal.style['z-index'] = '1'; 
+               modalpic.src= photo;
+            }
+        </script>
     </body>
 </html>

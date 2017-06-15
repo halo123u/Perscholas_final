@@ -5,7 +5,6 @@ nav{
     position: fixed;
     height: 40px;
     width: 100%;
-    display: flex;
 }
 ul {
     text-decoration: none;
@@ -27,15 +26,17 @@ li {
 
 #logo{
     width: 100px;
+    padding-right:100px;   
 }
 
 li:hover{
-    background: green;
+    background: black;
 }
 
 a{
     margin-top: 5px;
     text-decoration: none;
     color: white; 
-    text-align: center;
+    padding-left:90px; 
+
 }
