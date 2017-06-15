@@ -15,10 +15,12 @@
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <![]-->
         <div id="modal">
-                <span id="closeB" style="position:absolute; z-index:2;">&times;</span>
-                <img id="modalpic" class="" src="" alt="">
+                <span id="close">&times;</span>
+                <h1 id="title"></h1>
+                <img id="modalpic"  src="" alt="">
+                <p id="desc"></p>
             </div>
                 <nav>
             <ul>
@@ -47,7 +49,7 @@
         <div class="hero">
             <h1 style="width:100%;">Blue Team</h1>
             <img id="master_chief" class="char"src="https://venturebeat.com/wp-content/uploads/2015/06/Halo-5-Guardians-E3-2015-Master-Chief-05.jpg?fit=2560%2C1440&strip=all" onclick="display('master_chief');"alt="">
-            <img id="kelly" class="char"src="http://www.wallpapersbyte.com/wp-content/uploads/2015/07/Halo-5-Guardians-Game-Kelly-Shooter-Robot-WallpapersByte-com-2560x1600.jpg" onclick="display('kelly')"alt="">
+            <img id="kelly" class="char"src="https://i2.wp.com/www.wallpapersbyte.com/wp-content/uploads/2015/07/Halo-5-Guardians-Game-Kelly-Shooter-Robot-WallpapersByte-com-1366x768.jpg" onclick="display('kelly')"alt="">
             <img id="fred" class="char" src="http://www.hdwallpapers.in/walls/fred_halo_5_guardians-wide.jpg" onclick="display('fred')" alt="">
             <img id="linda" class="char" src="http://hdqwalls.com/wallpapers/linda-halo-5-guardians.jpg" onclick="display('linda')" alt="">
             <h1 style="width:100%;">Fireteam Osiris</h1>
@@ -61,14 +63,55 @@
                var modal = document.getElementById('modal');
                var pic = document.getElementById('modalpic');
                var photo = document.getElementById(picture).src;
-               var closeB = document.getElementById('closeB'); 
-               
-               closeB.onclick = function() {
+               var close = document.getElementById('close');
+           
+               modal.style.display = 'flex'
+               modal.style['z-index'] = '1';
+               window.location.href='#modal'; 
+               modalpic.src= photo;
+               load(picture);
+
+               close.onclick = function() {
                     modal.style.display = "none";
                 }
-               modal.style.display = 'flex'
-               modal.style['z-index'] = '1'; 
-               modalpic.src= photo;
+                function load(title){
+                    
+                    switch(title){
+                   case 'master_chief':
+                    document.getElementById('title').innerHTML= "John 117";
+                    document.getElementById('desc').innerHTML="Master chief is awesome";
+                   break;
+                   case 'kelly':
+                   document.getElementById('title').innerHTML = 'Kelly';
+                   document.getElementById('desc').innerHTML = 'this is kelly\'s stuff';
+                   break;
+                   case 'fred':
+                   document.getElementById('title').innerHTML = 'Fred';
+                   document.getElementById('desc').innerHTML = 'this is Freds\'s stuff';
+                   break;
+                   case 'linda':
+                   document.getElementById('title').innerHTML = 'Linda';
+                   document.getElementById('desc').innerHTML = 'this is Lindas\'s stuff';
+                   break;
+                   case 'Locke':
+                   document.getElementById('title').innerHTML = 'Locke';
+                   document.getElementById('desc').innerHTML = 'this is Lockes\'s stuff';
+                   break;
+                   case 'tanaka':
+                   document.getElementById('title').innerHTML = 'tanaka';
+                   document.getElementById('desc').innerHTML = 'this is tanakas\'s stuff';
+                   break;
+                   case 'buck':
+                   document.getElementById('title').innerHTML = 'buck';
+                   document.getElementById('desc').innerHTML = 'this is bucks\'s stuff';
+                   break;
+                   case 'vale':
+                   document.getElementById('title').innerHTML = 'vale';
+                   document.getElementById('desc').innerHTML = 'this is vales\'s stuff';
+                   break;
+
+               }
+                }
             }
         </script>
     </body>

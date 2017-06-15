@@ -2,23 +2,34 @@
 body{
     background: url('http://orig06.deviantart.net/8c67/f/2010/251/d/a/noble_team___black___by_elhiahcolee-d2ybizf.jpg');
     background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero {
     background: rgba(0,0,0,.7);
     padding-top:30px;
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;    
     flex-flow: wrap;
 }
 .char{
-    width: 300px;
+    height: 450px;
+    width: 550px;
+    border-radius: 90%;
+    margin: 10px;
+    border: .5px solid black;    
+}
+.char:hover{
+    width: 700px;
     height: 400px;
-    margin-right: 10px;
-    margin-left:10px;    
+    border-radius: 0%;
+    opacity: .5;
+    border: .7px solid white;
+    transition: 1s;
 }
 h1{
     color: white;   
@@ -27,8 +38,23 @@ h1{
     position: absolute;
     display: none;
     justify-content: center;
-    align-content: center;   
+    align-items: center;   
+    flex-direction: column;
     background: rgba(0, 0, 0, .8);
     width: 100vw;
     height: 100vh;
+}
+#modalpic{
+    height: 600px;
+    width: 900px;
+}
+#close{
+    font-size: 80px;
+    padding-left: 90vw;
+    color: yellow;
+    padding-bottom: 90vh;
+    position: absolute;
+}
+#desc{
+    color:yellow;
 }
