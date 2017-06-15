@@ -6,20 +6,39 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Weapons</title>
+        <title>Vehicles</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/characters.css">
         <link rel="stylesheet" href="../css/main.css">
     </head>
-    <body>
+    <body >
+        <style>
+            body{
+                background: url('https://www.videogamesartwork.com/sites/default/files/images/image/1375881844/haloreach_environment_spacestation.jpg');
+                 background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .hero{
+                flex-direction: column;
+            }
+        </style>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id="modal">
+                <span id="close">&times;</span>
+                <h1 id="title"></h1>
+                <img id="modalpic"  src="" alt="">
+                <p id="desc"></p>
+        </div>
                 <nav>
             <ul>
                 <li>
-                    <a href="/land.html"><img src="https://news.microsoft.com/stories/halo5/_media/images/branding/halo-5-effect-marquee-lockup-mobile.png" id="logo"></a>
+                    <a href="/"><img src="https://news.microsoft.com/stories/halo5/_media/images/branding/halo-5-effect-marquee-lockup-mobile.png" id="logo"></a>
                 </li>
                 <li>
                     <a href="about.html">About</a>
@@ -28,7 +47,7 @@
                     <a href="characters.html">Characters</a>
                 </li>
                 <li>
-                    <a href="vehicles.html" >Vehicles</a>
+                    <a href="vehicles.html">Vehicles</a>
                 </li>
                 <li>
                     <a href="halo_Wars.html">Halo Wars 2</a>
@@ -38,6 +57,75 @@
                 </li>
             </ul>
         </nav>
-        <h1>Weapons</h1>
+
+        
+        <div class="hero">
+            <h1 style="width:100%;">UNSC</h1>
+            <img id="norfang" class="wep" src="../assets/norfang.png" onclick="display('norfang');"alt="">
+            <img id="oathsworn" class="wep" src="../assets/oathsworn.png" onclick="display('oathsworn')"alt="">
+            <img id="chain" class="wep" src="../assets/chain.png" onclick="display('chain')" alt="">
+            <img id="laser" class="wep" src="../assets/SpartanLaser.png" onclick="display('laser')" alt="">
+            <h1 style="width:100%;">Covenant</h1>
+            <img id="sword" class="wep" src="../assets/sword.png" onclick="display('sword')" alt="">
+            <img id="ham" class="wep" src="../assets/ham.png" onclick="display('ham')" alt="">
+            <img id="beam" class="wep" src="../assets/beam.png" onclick="display('beam')" alt="">
+            <img id="fuel" class="wep" src="../assets/fuelrod.png" onclick="display('fuel')" alt="">
+        </div>
+        <script>
+            function display(picture){
+               var modal = document.getElementById('modal');
+               var pic = document.getElementById('modalpic');
+               var photo = document.getElementById(picture).src;
+               var close = document.getElementById('close');
+           
+               modal.style.display = 'flex'
+               modal.style['z-index'] = '1';
+               window.location.href='#modal'; 
+               modalpic.src= photo;
+               load(picture);
+
+               close.onclick = function() {
+                    modal.style.display = "none";
+                }
+                function load(title){
+                    
+                    switch(title){
+                   case 'norfang':
+                    document.getElementById('title').innerHTML= "Norfang";
+                    document.getElementById('desc').innerHTML="Nornfang was manufactured by Misriah Armory for their internal competitive sharpshooting team. The weapon went missing at some point, eventually coming into the possession of Spartan Linda-058.[1] Linda loads Nornfang with 14.5x114mm High-Explosive Armor-Piercing (HEAP) rounds. She has modified the rifle to ensure her HUD's motion tracker is visible even while using its optics.";
+                   break;
+                   case 'oathsworn':
+                   document.getElementById('title').innerHTML = 'Oathsworn';
+                   document.getElementById('desc').innerHTML = 'Petty Officer Second Class Kelly-087, born Kelly Shaddock,[1] is one of the few remaining SPARTAN-II supersoldiers. She is well-known due to close friendships with Joshua-029, Samuel-034, Linda-058, Frederic-104, and John-117. She was temporarily missing, but was later reunited with the remaining SPARTAN-IIs (excluding John-117) on Onyx.';
+                   break;
+                   case 'chain':
+                   document.getElementById('title').innerHTML = 'M247H machine gun';
+                   document.getElementById('desc').innerHTML = 'The M247H is an air-cooled, gas-operated, electrically fired, linkless-fed weapon that fires 12.7mm High Velocity, Explosive rounds. It is generally used to provide suppressing fire, point-to-point cover fire, and, predominantly, direct fire in an anti-personnel role, though it is also capable of destroying light vehicles with relative ease.';
+                   break;
+                   case 'laser':
+                   document.getElementById('title').innerHTML = 'M6 Grindell/Galilean Nonlinear Rifle';
+                   document.getElementById('desc').innerHTML = 'The Weapon/Anti-Vehicle Model 6 Grindell/Galilean Nonlinear Rifle (M6 G/GNR), colloquially known as the Spartan Laser, is a man-portable and vehicle-mounted solid-state[4] directed-energy anti-vehicle weapon used by the United Nations Space Command.[2][5] It is one of the few directed energy weapons fielded by UNSC forces, aside from the pulse lasers used by Office of Naval Intelligence prowlers and the X23 NNEMP Cannon used by Gremlin Combat Support Vehicles';
+                   break;
+                   case 'sword':
+                   document.getElementById('title').innerHTML = 'Prophet\'s Bane' ;
+                   document.getElementById('desc').innerHTML = 'The Prophets\' Bane, originally called End of Night, is Arbiter Thel \'Vadam\'s personal energy sword. The blade\'s name is a testament to \'Vadam\'s staunch opposition to the Prophets\' leadership ever since the latter days of the Human-Covenant War and the beginning of the Great Schism. Like other high-ranking Sangheili, Thel \'Vadam had the ancient sword custom-upgraded by a master swordsmith[3] in Vadam keep.[';
+                   break;
+                   case 'ham':
+                   document.getElementById('title').innerHTML = 'Type-2 gravity hammer';
+                   document.getElementById('desc').innerHTML = 'The Type-2 Energy Weapon/Hammer (T2 EW/H), more commonly known as the gravity hammer, is a powerful, close-quarters, two-handed melee weapon used by the Jiralhanae';
+                   break;
+                   case 'beam':
+                   document.getElementById('title').innerHTML = 'Type-50 Particle Beam Rifle';
+                   document.getElementById('desc').innerHTML = 'The Type-50 Sniper Rifle System,[3] otherwise known as the Particle Beam Rifle or simply Beam Rifle, is a Covenant long-range weapon and the counterpart of the UNSC SRS99 series sniper rifles. It is also the successor to the earlier Type-27 Special Application Sniper Rifle.';
+                   break;
+                   case 'fuel':
+                   document.getElementById('title').innerHTML = 'Type-33 Fuel Rod';
+                   document.getElementById('desc').innerHTML = 'The Type-33 Light Anti-Armor Weapon (T-33 LAAW),[6] colloquially known as the fuel rod gun, is a shoulder-fired mortar/radiation weapon, formerly used by the Covenant military and now in service with the Swords of Sanghelios.[3] It is also sometimes called the flak cannon[7] or fuel rod cannon[8] though the latter term is usually reserved for vehicle-mounted weapons based on the same technology.';
+                   break;
+
+               }
+                }
+            }
+        </script>
     </body>
 </html>

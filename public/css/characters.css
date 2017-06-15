@@ -23,6 +23,19 @@ body{
     margin: 10px;
     border: .5px solid black;    
 }
+.wep{
+    height: 30%;
+    width: 50%;
+    margin: 2%;
+    border: .5px solid black; 
+}
+.wep:hover{
+    background: rgba(255, 255, 255, .2);
+    border: .7px solid white;
+    transition: 1s;
+    perspective: 400px;
+    transform: rotateZ(5deg);
+}
 .char:hover{
     width: 700px;
     height: 400px;
@@ -30,6 +43,8 @@ body{
     opacity: .5;
     border: .7px solid white;
     transition: 1s;
+    perspective: 400px;
+    transform: rotateZ(5deg);
 }
 h1{
     color: white;   
