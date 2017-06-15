@@ -63,6 +63,10 @@ h1{
     height: 600px;
     width: 900px;
 }
+#modalpic2{
+    height: 300px;
+    width: 600px;
+}
 #close{
     font-size: 80px;
     padding-left: 90vw;

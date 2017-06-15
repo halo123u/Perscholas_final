@@ -30,7 +30,7 @@ li {
 }
 
 li:hover{
-    background: black;
+    background: rgba(39 , 184, 232, .7);
 }
 
 a{

@@ -33,6 +33,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border:.7px solid black;
 }
 
 .mySlide{
@@ -76,6 +77,8 @@ body{
 .imgC{
     width: 100%;
     /*height: 100%;        */
+    border:.7px solid black;
+    margin: 2px;
 }
 .contentR{
     flex: 3;
